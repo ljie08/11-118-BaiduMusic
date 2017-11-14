@@ -46,14 +46,12 @@
     
     self.oldProgress = 0.000;
     self.isPlay = YES;
-    
-    self.file = [[LynnPlayer alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-//    self.playTimeLab.text = @"0:00";
+    //    self.playTimeLab.text = @"0:00";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -62,7 +60,6 @@
     CGFloat width = self.abulmImgview.frame.size.width;
     self.abulmImgview.layer.masksToBounds = YES;
     self.abulmImgview.layer.cornerRadius = width/2;
-    NSLog(@"...");
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -79,6 +76,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         songPlay = [[PlayViewController alloc] init];
+        songPlay.file = [[LynnPlayer alloc] init];
     });
     return songPlay;
 }
@@ -103,7 +101,7 @@
 #pragma mark - data
 - (void)initViewModelBinding {
     self.viewmodel = [[PlayViewModel alloc] init];
-//    [self loadData];
+    //    [self loadData];
 }
 
 - (void)loadData {
@@ -136,7 +134,7 @@
 
 - (void)gotoArtistVC {
     [self gotoArtistVCWithTinguid:self.viewmodel.songInfo.ting_uid];
-//    ArtistInfo *info = self.viewmodel.songInfo.ting_uid;
+    //    ArtistInfo *info = self.viewmodel.songInfo.ting_uid;
 }
 
 - (void)goBack {
@@ -280,6 +278,16 @@
     }
 }
 
+- (NSString *)strWithDuration:(NSString *)duration {
+    int minute = [duration intValue]/60;
+    int second = [duration intValue]%60;
+    if (second < 10) {
+        return [NSString stringWithFormat:@"%d:0%d", minute, second];
+    } else {
+        return [NSString stringWithFormat:@"%d:%d", minute, second];
+    }
+}
+
 #pragma mark - 监听
 /**
  利用KVO监听的属性值改变了,就会调用
@@ -301,28 +309,27 @@
     [self setBackButton:YES];
     
     [self setNav];
-    NSLog(@"...");
 }
 
 - (void)setUpData {
-//    [self initTitleViewWithTitle:self.viewmodel.songInfo.title];
+    //    [self initTitleViewWithTitle:self.viewmodel.songInfo.title];
     
     [self.bgImgview sd_setImageWithURL:[NSURL URLWithString:self.viewmodel.songInfo.pic_premium] placeholderImage:PlaceholderImage options:SDWebImageAllowInvalidSSLCertificates];
     [self.abulmImgview sd_setImageWithURL:[NSURL URLWithString:self.viewmodel.songInfo.pic_premium] placeholderImage:PlaceholderImage options:SDWebImageAllowInvalidSSLCertificates];
     self.songnameLab.text = self.viewmodel.songInfo.title;
     self.artistLab.text = self.viewmodel.songInfo.author;
     self.playTimeLab.text = @"0:00";
-    self.totalTimeLab.text = [NSString stringWithFormat:@"%ld:%ld", self.viewmodel.bitrate.file_duration/60, self.viewmodel.bitrate.file_duration%60];
+    self.totalTimeLab.text = [self strWithTime:self.viewmodel.bitrate.file_duration];
 }
 
 - (void)setNav {
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(0, 0, 25, 25);
-
+    
     UIImage *rightImg = [UIImage imageNamed:@"me"];
     
     rightImg = [rightImg imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)];
-//
+    //
     [rightBtn setImage:rightImg forState:UIControlStateNormal];
     [rightBtn setTintColor:FontColor];
     
@@ -342,7 +349,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end
