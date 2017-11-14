@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistHeaderCell" rowHeight="185" id="KGk-i7-Jjw" customClass="ArtistHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="184.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="7hm-pR-Kf6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="184.5"/>
+                    </imageView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xon-6d-Irb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="184.5"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PoK-m0-6ox">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="184.5"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="Lrc-Ct-MhV">
+                                    <rect key="frame" x="127.5" y="25" width="65" height="65"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="65" id="JWX-Ep-7Vl"/>
+                                        <constraint firstAttribute="width" secondItem="Lrc-Ct-MhV" secondAttribute="height" multiplier="1:1" id="aUM-dc-Q76"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <real key="value" value="32.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="薛之谦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdV-hc-F2X">
+                                    <rect key="frame" x="137" y="98" width="46" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeJ-xs-vg8">
+                                    <rect key="frame" x="147.5" y="126" width="25" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="环球音乐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYg-CT-Pg6">
+                                    <rect key="frame" x="135.5" y="145" width="49.5" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="FdV-hc-F2X" firstAttribute="centerX" secondItem="Lrc-Ct-MhV" secondAttribute="centerX" id="3wa-lq-4sS"/>
+                                <constraint firstItem="FdV-hc-F2X" firstAttribute="top" secondItem="Lrc-Ct-MhV" secondAttribute="bottom" constant="8" id="Bmu-Nl-6du"/>
+                                <constraint firstItem="yeJ-xs-vg8" firstAttribute="top" secondItem="FdV-hc-F2X" secondAttribute="bottom" constant="10" id="DqZ-W6-iHJ"/>
+                                <constraint firstItem="pYg-CT-Pg6" firstAttribute="centerX" secondItem="yeJ-xs-vg8" secondAttribute="centerX" id="GlI-Si-55M"/>
+                                <constraint firstItem="Lrc-Ct-MhV" firstAttribute="centerX" secondItem="PoK-m0-6ox" secondAttribute="centerX" id="Kgy-l0-4of"/>
+                                <constraint firstItem="Lrc-Ct-MhV" firstAttribute="top" secondItem="PoK-m0-6ox" secondAttribute="top" constant="25" id="MFW-K6-87T"/>
+                                <constraint firstItem="yeJ-xs-vg8" firstAttribute="centerX" secondItem="FdV-hc-F2X" secondAttribute="centerX" id="N6F-NT-fZu"/>
+                                <constraint firstItem="pYg-CT-Pg6" firstAttribute="top" secondItem="yeJ-xs-vg8" secondAttribute="bottom" constant="5" id="QRM-Ne-VcC"/>
+                            </constraints>
+                        </view>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7hm-pR-Kf6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RYp-0C-SEw"/>
+                    <constraint firstItem="Xon-6d-Irb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SyX-06-usx"/>
+                    <constraint firstItem="7hm-pR-Kf6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YUU-ZE-LYq"/>
+                    <constraint firstAttribute="trailing" secondItem="7hm-pR-Kf6" secondAttribute="trailing" id="cWG-bW-Ymc"/>
+                    <constraint firstAttribute="bottom" secondItem="Xon-6d-Irb" secondAttribute="bottom" id="lZg-eC-Z3v"/>
+                    <constraint firstAttribute="trailing" secondItem="Xon-6d-Irb" secondAttribute="trailing" id="r3g-oQ-yvv"/>
+                    <constraint firstItem="Xon-6d-Irb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="s6O-i7-kWc"/>
+                    <constraint firstAttribute="bottom" secondItem="7hm-pR-Kf6" secondAttribute="bottom" id="zs0-m6-OxS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="artistImgview" destination="Lrc-Ct-MhV" id="cOa-bP-TcL"/>
+                <outlet property="artistNameLab" destination="FdV-hc-F2X" id="cfr-Uc-taC"/>
+                <outlet property="bgImgview" destination="7hm-pR-Kf6" id="o3P-1B-ngb"/>
+                <outlet property="companyLab" destination="pYg-CT-Pg6" id="gAw-tQ-dbB"/>
+                <outlet property="countryLab" destination="yeJ-xs-vg8" id="d8M-Fc-GGH"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="124.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="3" width="150" height="150"/>
+    </resources>
+</document>

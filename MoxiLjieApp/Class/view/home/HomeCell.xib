@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="120" id="KGk-i7-Jjw" customClass="HomeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="T6W-aK-agM">
+                        <rect key="frame" x="0.0" y="5" width="109.5" height="109.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="T6W-aK-agM" secondAttribute="height" multiplier="1:1" id="vVW-jK-Gwl"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-10-11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE4-5C-99L">
+                        <rect key="frame" x="119" y="82" width="72" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三角题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zA-O7-mpV">
+                        <rect key="frame" x="119" y="20" width="46" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="二珂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhs-xC-SRi">
+                        <rect key="frame" x="119" y="54" width="29" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6zA-O7-mpV" firstAttribute="leading" secondItem="T6W-aK-agM" secondAttribute="trailing" constant="10" id="1Er-mw-QEu"/>
+                    <constraint firstItem="SE4-5C-99L" firstAttribute="top" secondItem="Hhs-xC-SRi" secondAttribute="bottom" constant="11" id="KNq-H0-IZm"/>
+                    <constraint firstItem="SE4-5C-99L" firstAttribute="leading" secondItem="T6W-aK-agM" secondAttribute="trailing" constant="10" id="LlF-UI-Oed"/>
+                    <constraint firstAttribute="bottom" secondItem="SE4-5C-99L" secondAttribute="bottom" constant="20" id="MGX-hA-pyr"/>
+                    <constraint firstAttribute="bottom" secondItem="T6W-aK-agM" secondAttribute="bottom" constant="5" id="Xki-Es-NXM"/>
+                    <constraint firstItem="T6W-aK-agM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="dn1-fw-HhJ"/>
+                    <constraint firstItem="T6W-aK-agM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nIt-BG-qvY"/>
+                    <constraint firstItem="Hhs-xC-SRi" firstAttribute="leading" secondItem="T6W-aK-agM" secondAttribute="trailing" constant="10" id="ugB-tY-Qds"/>
+                    <constraint firstItem="6zA-O7-mpV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="xy9-BX-tlk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="34" y="92"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="5" width="150" height="150"/>
+    </resources>
+</document>
